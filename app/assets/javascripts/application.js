@@ -15,3 +15,9 @@
 //= require turbolinks
 //= require_tree .
 //= require bootstrap-sprockets
+
+$(document).ready(function(){
+  $('div.grid-item').each(function() {
+    $(this).addClass('tag'+ (Math.floor(Math.random()* 10)+ 1));
+    });
+  });

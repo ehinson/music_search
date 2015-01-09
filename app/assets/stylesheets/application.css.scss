@@ -16,3 +16,73 @@
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+/* Tag Cloud */
+
+.grid {
+  margin: 0 auto;
+  max-width: 50em;
+  padding: 0 1em;
+}
+
+.grid-item {
+  display: inline;
+  margin: 0.2em 0.1em;
+  font-size: 1.5em;
+}
+
+.grid-item:hover {
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+
+.cloud {
+    div.tag2 {
+      font-size: 0.8em;
+      font-weight: 100;
+      color: #BBB749;
+    }
+    div.tag3 {
+      font-size: 1em;
+      font-weight: 200;
+      color: #BBB749;
+    }
+    div.tag4 {
+      font-size: 1.2em;
+      font-weight: 300;
+      color: #BBB749;
+    }
+    div.tag5 {
+      font-size: 1.4em;
+      font-weight: 100;
+      color: #BBB749;
+    }
+    div.tag6 {
+      font-size: 1.6em;
+      font-weight: 300;
+      color: #BBB749;
+    }
+    div.tag7 {
+      font-size: 1.8em;
+      font-weight: 300;
+      color: #BBB749;
+    }
+     div.tag8 {
+      font-size: 2em;
+      font-weight: 300;
+      color: #BBB749;
+    }
+     div.tag9 {
+      font-size: 2.2em;
+      font-weight: 300;
+      color: #BBB749;
+    }
+     div.tag10 {
+      font-size: 2.4em;
+      font-weight: 300;
+      color: #BBB749;
+    }
+}
+
+
+

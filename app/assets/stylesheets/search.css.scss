@@ -4,11 +4,17 @@
 
 /* Links */
 
-a, 
-a:focus, 
-a:hover {
-  color: #fff;
+a {
+  color: #000;
+  &:visited {
+    color: #666;
+  }
+  &:hover {
+    color: #fff;
+    text-decoration: none;
+  }
 }
+
 
 /* Buttons */
 
@@ -73,6 +79,9 @@ body {
 .cover-heading {
    text-shadow: 0 1px 3px rgba(0,0,0,.5);
 }
+
+
+/* Media Queries */
 
 @media (min-width: 768px) {
   .site-wrapper-inner {

@@ -6,7 +6,9 @@
 
           <div class="inner cover grid cloud">
             <h3 class= "lead">You searched for: </h3>
-            <a href = "#" class= "grid-item tag2"><%= params['search']['search'] %></a>
+            <%  30.times do  %>
+            <div class= "grid-item"><a href = "#"><%= params['search']['search'] %></a></div>
+            <%  end  %>
           </div>
 
         </div>
