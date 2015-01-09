@@ -8,7 +8,6 @@ Rails.application.routes.draw do
 
   root to: 'search#index'
 
-  map.resources :static_pages, :collection => {:index => :get, :results=> :post}
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
