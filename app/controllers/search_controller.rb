@@ -1,12 +1,10 @@
 class SearchController < ApplicationController
   def index
-   
   end
 
-  def show
+  def new
   end
 
-  def search
+  def create
   end
-
 end

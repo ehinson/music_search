@@ -1,9 +1,0 @@
-
-<h3>You searched for: <%= @search %></h3>
-
-    <% @results.each do |result|  %>
-    <% if result.include? @search %>
-     <%= result[@search] %>
-     <hr>
-   <%end %>
-   <%  end  %>

@@ -1,0 +1,29 @@
+    <div class="site-wrapper">
+
+      <div class="site-wrapper-inner">
+
+        <div class="cover-container">
+
+          <div class="inner cover">
+            <h1 class="cover-heading">What do you want to hear?</h1>
+              <%= form_for :search, url: {action: "create"} do |f| %>
+              <div class="lead">
+                <%= f.label :genre, "" %><br>
+                <%= f.text_field :genre, placeholder: "Search for music" %><br>
+              </div>
+             
+
+  
+            
+              <%= f.submit 'Search', class: 'btn btn-default' %>
+            
+
+             <% end %>
+          </div>
+
+          
+        </div>
+
+      </div>
+
+    </div>

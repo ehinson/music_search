@@ -1,10 +1,6 @@
 Rails.application.routes.draw do
 
-  get 'static_pages/index'
-  get 'static_pages/results'
-
-  get 'search/index'
-  get 'search/show'
+  resources :search
 
   root to: 'search#index'
 
