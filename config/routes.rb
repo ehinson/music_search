@@ -2,7 +2,7 @@ Rails.application.routes.draw do
 
   resources :search
 
-  root to: 'search#index'
+  root to: 'search#new'
 
 
   # The priority is based upon order of creation: first created -> highest priority.

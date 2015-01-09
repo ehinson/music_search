@@ -8,15 +8,15 @@
             <h1 class="cover-heading">What do you want to hear?</h1>
               <%= form_for :search, url: {action: "create"} do |f| %>
               <div class="lead">
-                <%= f.label :genre, "" %><br>
-                <%= f.text_field :genre, placeholder: "Search for music" %><br>
+                
+                <%= f.text_field :search, placeholder: "Search for music" %><br>
               </div>
              
 
   
-            
-              <%= f.submit 'Search', class: 'btn btn-default' %>
-            
+              <p class= "lead">
+                <%= f.submit 'Search', class: 'btn btn-default' %>
+              </p>
 
              <% end %>
           </div>
