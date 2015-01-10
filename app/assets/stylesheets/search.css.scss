@@ -219,6 +219,28 @@ div.lead {
   }
 }
 
+/* Icons */
+
+/* Content */
+
+.content section {
+  font-size: 1.25em;
+  padding: 3em 1em;
+  display: none;
+  max-width: 1230px;
+  margin: 0 auto;
+
+  &:before,
+  &:after {
+    content: '';
+    display: table;
+  }
+
+  &:after {
+    clear: both;
+  }
+}
+
 
 
 
