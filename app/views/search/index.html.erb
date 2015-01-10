@@ -1,29 +1,103 @@
-    <div class="site-wrapper">
-
-      <div class="site-wrapper-inner">
-
-        <div class="cover-container">
-
-          <div class="inner cover">
-            <h1 class="cover-heading">What do you want to hear?</h1>
-              <%= form_for :search, url:{action: 'create'} do |f| %>
-              <div class="lead">
-                <%= f.label (:search, "") %><br>
-                <%= f.text_field (:artist, placeholder: "Search for music") %><br>
-              </div>
-              <% end %>
-
-  
-            <p class="lead">
-              <%= submit_tag 'Search', class: 'btn btn-default' %>
-            </p>
-          </div>
-
-          
-        </div>
-
-      </div>
-
-    </div>
-
+<div id = "tabs" class="tabs">
+  <nav>
+    <ul>
+      <li><a href="#section-1" class="icon-1"><span>Section 1</span></a></li>
+      <li><a href="#section-2" class="icon-2"><span>Section 2</span></a></li>
+      <li><a href="#section-3" class="icon-3"><span>Section 3</span></a></li>
+      <li><a href="#section-4" class="icon-4"><span>Section 4</span></a></li>
+      <li><a href="#section-5" class="icon-5"><span>Section 5</span></a></li>
+    </ul>
+  </nav>
+  <div class="content">
+    <section id = "section-1">
+      <div class="mediabox">
+        <img src="">
+        <h3>Sushi Gumbo Beetroot</h3>
+        <p>Some chickens are half male, half female. The national animal of Scotland is the unicorn.</p>
+      </div><!--mediabox-->
+      <div class="mediabox">
+        <img src="">
+        <h3>Peas Fava Chianti</h3>
+        <p>Joan of Arc was not Noah's wife. Cyclophobia is the fear of bicycles.</p>
+      </div><!--mediabox-->
+      <div class="mediabox">
+        <img src="">
+        <h3>Boil 'em Mash 'em Stick 'em in a stew</h3>
+        <p>James Earl Jones had a severe stutter and refused to speak in school. Elephants are scared of bees.</p>
+      </div><!--mediabox-->
+    </section>
+    <section id = "section-2">
+      <div class="mediabox">
+        <img src="">
+        <h3>Sushi Gumbo Beetroot</h3>
+        <p>Some chickens are half male, half female. The national animal of Scotland is the unicorn.</p>
+      </div><!--mediabox-->
+      <div class="mediabox">
+        <img src="">
+        <h3>Peas Fava Chianti</h3>
+        <p>Joan of Arc was not Noah's wife. Cyclophobia is the fear of bicycles.</p>
+      </div><!--mediabox-->
+      <div class="mediabox">
+        <img src="">
+        <h3>Boil 'em Mash 'em Stick 'em in a stew</h3>
+        <p>James Earl Jones had a severe stutter and refused to speak in school. Elephants are scared of bees.</p>
+      </div><!--mediabox-->
+    </section>
+    <section id = "section-3">
+      <div class="mediabox">
+        <img src="">
+        <h3>Sushi Gumbo Beetroot</h3>
+        <p>Some chickens are half male, half female. The national animal of Scotland is the unicorn.</p>
+      </div><!--mediabox-->
+      <div class="mediabox">
+        <img src="">
+        <h3>Peas Fava Chianti</h3>
+        <p>Joan of Arc was not Noah's wife. Cyclophobia is the fear of bicycles.</p>
+      </div><!--mediabox-->
+      <div class="mediabox">
+        <img src="">
+        <h3>Boil 'em Mash 'em Stick 'em in a stew</h3>
+        <p>James Earl Jones had a severe stutter and refused to speak in school. Elephants are scared of bees.</p>
+      </div><!--mediabox-->
+    </section>
+    <section id = "section-4">
+      <div class="mediabox">
+        <img src="">
+        <h3>Sushi Gumbo Beetroot</h3>
+        <p>Some chickens are half male, half female. The national animal of Scotland is the unicorn.</p>
+      </div><!--mediabox-->
+      <div class="mediabox">
+        <img src="">
+        <h3>Peas Fava Chianti</h3>
+        <p>Joan of Arc was not Noah's wife. Cyclophobia is the fear of bicycles.</p>
+      </div><!--mediabox-->
+      <div class="mediabox">
+        <img src="">
+        <h3>Boil 'em Mash 'em Stick 'em in a stew</h3>
+        <p>James Earl Jones had a severe stutter and refused to speak in school. Elephants are scared of bees.</p>
+      </div><!--mediabox-->
+    </section>
+    <section id = "section-5">
+      <div class="mediabox">
+        <img src="">
+        <h3>Sushi Gumbo Beetroot</h3>
+        <p>Some chickens are half male, half female. The national animal of Scotland is the unicorn.</p>
+      </div><!--mediabox-->
+      <div class="mediabox">
+        <img src="">
+        <h3>Peas Fava Chianti</h3>
+        <p>Joan of Arc was not Noah's wife. Cyclophobia is the fear of bicycles.</p>
+      </div><!--mediabox-->
+      <div class="mediabox">
+        <img src="">
+        <h3>Boil 'em Mash 'em Stick 'em in a stew</h3>
+        <p>James Earl Jones had a severe stutter and refused to speak in school. Elephants are scared of bees.</p>
+      </div><!--mediabox-->
+    </section>
+  </div><!--content-->
+</div><!--tabs-->
+<script type="text/javascript" src="js/tabs.js"></script>
+<script type="text/javascript">
+  new tabs(document.getElementById('tabs'));
+</script>
 

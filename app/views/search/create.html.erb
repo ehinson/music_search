@@ -5,12 +5,18 @@
         <div class="cover-container container">
 
           <div class="inner cover grid cloud">
-            <h3 class= "lead">You searched for: </h3>
+            <h3 class= "lead">There are <script type="text/javascript"> document.write(Math.floor(Math.random()* 10000)+ 1)</script> results for <%= params['search']['search'] %>
+            </h3>
+        
+            <div class= "results">
             <%  50.times do  %>
-            <div class= "grid-item"><a href = "#"><%= params['search']['search'] %></a></div>
-            <%  end  %>
-          </div>
+            <div class= "grid-item"><a href = "#"><%= params['search']['search'] %></a>
+            </div><!--grid-item-->
+              <%  end  %>
+            </div><!--results-->
+          </div><!--inner-->
+          
 
-        </div>
-      </div>
-    </div>
+        </div><!--cover-container-->
+      </div><!--site-wrapper-inner-->
+    </div><!--site-wrapper-->
