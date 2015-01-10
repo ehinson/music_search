@@ -5,18 +5,16 @@
         <div class="cover-container">
 
           <div class="inner cover">
-            <h1 class="cover-heading">What do you want to hear?</h1>
+            
               <%= form_for :search, url: {action: "create"} do |f| %>
-              <div class="lead">
-                
-                <%= f.text_field :search, placeholder: "Search for music" %><br>
-              </div>
+                <div class = "lead">
+                  <h1 class="cover-heading">I want to hear</h1>
+                <%= f.text_field :search, placeholder: "new music" %>
              
 
   
-              <p class= "lead">
                 <%= f.submit 'Search', class: 'btn btn-default' %>
-              </p>
+              </div>
 
              <% end %>
           </div>
