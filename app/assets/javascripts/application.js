@@ -20,4 +20,7 @@ $(document).ready(function(){
   $('div.grid-item').each(function() {
     $(this).addClass('tag'+ (Math.floor(Math.random()* 10)+ 1));
     });
+
+  
   });
+

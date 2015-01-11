@@ -3,20 +3,196 @@
       <div class="site-wrapper-inner skin-1">
 
         <div class="cover-container container">
+          <div id="tabs" class="tabs">
+              <nav>
+                <ul class="tab-browsing">
+                  <li><a href="#section-1" class="icon-1 text-uppercase breathe"><span>Artists</span></a></li>
+                  <li><a href="#section-2" class="icon-2 text-uppercase breathe"><span>Genres</span></a></li>
+                  <li><a href="#section-3" class="icon-3 text-uppercase breathe"><span>Albums</span></a></li>
+                  <li><a href="#section-4" class="icon-4 text-uppercase breathe"><span>Songs</span></a></li>
+                  <li><a href="#section-5" class="icon-5 text-uppercase breathe"><span>Playlists</span></a></li>
+                </ul>
+              </nav>
+            
+            </div><!--tabs-->
+          <div class="content">
+                <section id="section-1" class="">
+                  <div class="mediabox">
+                     <div class="square">
+                        <div class="effect-milo">
+                          <div class="square-inner"></div><!--square-inner-->
+                          <div class="caption">
+                            <h2>Artist<span><%= params['search']['search'] %></span></h2>
+                            <p><small class="breathe">Hottness:92<br>Top Song<br>Song Name<br>More</small></p>
+                            <!-- <a href="#">View more</a> -->
+                        </div>    <!--caption--> 
+                      </div><!--effect-milo-->
+                    </div><!--square-->
+                    <div class="square">
+                        <div class="effect-milo">
+                          <div class="square-inner"></div><!--square-inner-->
+                          <div class="caption">
+                            <h2>Artist<span><%= params['search']['search'] %></span></h2>
+                            <p><small class="breathe">Hottness:92<br>Top Song<br>Song Name<br>More</small></p>
+                            <!-- <a href="#">View more</a> -->
+                        </div>    <!--caption--> 
+                      </div><!--effect-milo-->
+                    </div><!--square-->
+                    <div class="square">
+                        <div class="effect-milo">
+                          <div class="square-inner"></div><!--square-inner-->
+                          <div class="caption">
+                            <h2>Artist<span><%= params['search']['search'] %></span></h2>
+                            <p><small class="breathe">Hottness:92<br>Top Song<br>Song Name<br>More</small></p>
+                            <!-- <a href="#">View more</a> -->
+                        </div>    <!--caption--> 
+                      </div><!--effect-milo-->
+                    </div><!--square-->
+                    <div class="square">
+                        <div class="effect-milo">
+                          <div class="square-inner"></div><!--square-inner-->
+                          <div class="caption">
+                            <h2>Artist<span><%= params['search']['search'] %></span></h2>
+                            <p><small class="breathe">Hottness:92<br>Top Song<br>Song Name<br>More</small></p>
+                            <!-- <a href="#">View more</a> -->
+                        </div>    <!--caption--> 
+                      </div><!--effect-milo-->
+                    </div><!--square-->
+                    <div class="square">
+                        <div class="effect-milo">
+                          <div class="square-inner"></div><!--square-inner-->
+                          <div class="caption">
+                            <h2>Artist<span><%= params['search']['search'] %></span></h2>
+                            <p><small class="breathe">Hottness:92<br>Top Song<br>Song Name<br>More</small></p>
+                            <!-- <a href="#">View more</a> -->
+                        </div>    <!--caption--> 
+                      </div><!--effect-milo-->
+                    </div><!--square-->
+                    <div class="square">
+                        <div class="effect-milo">
+                          <div class="square-inner"></div><!--square-inner-->
+                          <div class="caption">
+                            <h2>Artist<span><%= params['search']['search'] %></span></h2>
+                            <p><small class="breathe">Hottness:92<br>Top Song<br>Song Name<br>More</small></p>
+                            <!-- <a href="#">View more</a> -->
+                        </div>    <!--caption--> 
+                      </div><!--effect-milo-->
+                    </div><!--square-->
+                    <div class="square">
+                        <div class="effect-milo">
+                          <div class="square-inner"></div><!--square-inner-->
+                          <div class="caption">
+                            <h2>Artist<span><%= params['search']['search'] %></span></h2>
+                            <p><small class="breathe">Hottness:92<br>Top Song<br>Song Name<br>More</small></p>
+                            <!-- <a href="#">View more</a> -->
+                        </div>    <!--caption--> 
+                      </div><!--effect-milo-->
+                    </div><!--square-->
+                    <div class="square">
+                        <div class="effect-milo">
+                          <div class="square-inner"></div><!--square-inner-->
+                          <div class="caption">
+                            <h2>Artist<span><%= params['search']['search'] %></span></h2>
+                            <p><small class="breathe">Hottness:92<br>Top Song<br>Song Name<br>More</small></p>
+                            <!-- <a href="#">View more</a> -->
+                        </div>    <!--caption--> 
+                      </div><!--effect-milo-->
+                    </div><!--square-->
+                    <div class="square">
+                        <div class="effect-milo">
+                          <div class="square-inner"></div><!--square-inner-->
+                          <div class="caption">
+                            <h2>Artist<span><%= params['search']['search'] %></span></h2>
+                            <p><small class="breathe">Hottness:92<br>Top Song<br>Song Name<br>More</small></p>
+                            <!-- <a href="#">View more</a> -->
+                        </div>    <!--caption--> 
+                      </div><!--effect-milo-->
+                    </div><!--square-->
+                  </div><!--mediabox-->
+                  
+                </section>
+                <section id= "section-2">
+                  <div class="mediabox">
+                    <table>
+                      <thead>
+                        <tr>
+                        <th>One</th>
+                        <th>Two</th>
+                        <th>Three</th>
+                      </tr>
+                      </thead>
+                      <tbody>
+                        <%  30.times do  %>
+                        <tr>
+                          <td><%= params['search']['search'] %></td>
+                          <td>Here's Some Stuff</td>
+                          <td>More</td>
+                        </tr>
+                        <%  end  %>
+
+                      </tbody>
+                    </table>
+                  </div><!--mediabox-->
+                </section>
+                <section id = "section-3">
+                  <div class="mediabox">
+                    <img src="">
+                    <h3>Sushi Gumbo Beetroot</h3>
+                    <p>Some chickens are half male, half female. The national animal of Scotland is the unicorn.</p>
+                  </div><!--mediabox-->
+                  <div class="mediabox">
+                    <img src="">
+                    <h3>Peas Fava Chianti</h3>
+                    <p>Joan of Arc was not Noah's wife. Cyclophobia is the fear of bicycles.</p>
+                  </div><!--mediabox-->
+                  <div class="mediabox">
+                    <img src="">
+                    <h3>Boil 'em Mash 'em Stick 'em in a stew</h3>
+                    <p>James Earl Jones had a severe stutter and refused to speak in school. Elephants are scared of bees.</p>
+                  </div><!--mediabox-->
+                </section>
+                <section id = "section-4">
+                  <div class="mediabox">
+                    <img src="">
+                    
+                    <h3>Sushi Gumbo Beetroot</h3>
+                    <p>Some chickens are half male, half female. The national animal of Scotland is the unicorn.</p>
+                  </div><!--mediabox-->
+                  <div class="mediabox">
+                    <img src="">
+                    <h3>Peas Fava Chianti</h3>
+                    <p>Joan of Arc was not Noah's wife. Cyclophobia is the fear of bicycles.</p>
+                  </div><!--mediabox-->
+                  <div class="mediabox">
+                    <img src="">
+                    <h3>Boil 'em Mash 'em Stick 'em in a stew</h3>
+                    <p>James Earl Jones had a severe stutter and refused to speak in school. Elephants are scared of bees.</p>
+                  </div><!--mediabox-->
+                </section>
+                <section id = "section-5">
+                  <div class="mediabox">
+                    <img src="">
+                    <h3>Sushi Gumbo Beetroot</h3>
+                    <p>Some chickens are half male, half female. The national animal of Scotland is the unicorn.</p>
+                  </div><!--mediabox-->
+                  <div class="mediabox">
+                    <img src="">
+                    <h3>Peas Fava Chianti</h3>
+                    <p>Joan of Arc was not Noah's wife. Cyclophobia is the fear of bicycles.</p>
+                  </div><!--mediabox-->
+                  <div class="mediabox">
+                    <img src="">
+                    <h3>Boil 'em Mash 'em Stick 'em in a stew</h3>
+                    <p>James Earl Jones had a severe stutter and refused to speak in school. Elephants are scared of bees.</p>
+                  </div><!--mediabox-->
+                </section>
+              </div><!--content-->
 
           <div class="inner cover grid cloud">
-            <h3 class= "lead">There are <script type="text/javascript"> document.write(Math.floor(Math.random()* 10000)+ 1)</script> results for <%= params['search']['search'] %>
+            <h3 class= "lead"><span class="pull-left">Searching for: <%= params['search']['search'] %></span><span class="pull-right"><script type="text/javascript"> document.write(Math.floor(Math.random()* 10000)+ 1)</script> results<span> 
             </h3>
-        
-            <div class= "results">
-            <%  50.times do  %>
-            <div class= "grid-item"><a href = "#"><%= params['search']['search'] %></a>
-            </div><!--grid-item-->
-              <%  end  %>
-            </div><!--results-->
           </div><!--inner-->
-          
-
         </div><!--cover-container-->
+         
       </div><!--site-wrapper-inner-->
     </div><!--site-wrapper-->

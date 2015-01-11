@@ -21,7 +21,7 @@
 
 .grid {
   margin: 0 auto;
-  max-width: 40em;
+  max-width: 60em;
   padding: 0 1em;
 }
 
@@ -37,52 +37,60 @@
 }
 
 .cloud {
-    div.tag2 {
+    div.tag2 a{
       font-size: 0.7em;
       font-weight: 100;
-      color: #BBB749;
+      color: #FF9900;
     }
-    div.tag3 {
-      font-size: 1em;
+    div.tag3 a{
+      font-size: .9em;
       font-weight: 200;
-      color: #BBB749;
+      color: #424242;
     }
-    div.tag4 {
+    div.tag4 a{
+      font-size: 1.1em;
+      font-weight: 300;
+      color: #3299BB;
+    }
+    div.tag5 a{
       font-size: 1.3em;
-      font-weight: 300;
-      color: #BBB749;
+      font-weight: 100;
+      color: #F2D43F;
     }
-    div.tag5 {
+    div.tag6 a{
       font-size: 1.5em;
-      font-weight: 100;
-      color: #BBB749;
-    }
-    div.tag6 {
-      font-size: 1.8em;
       font-weight: 200;
-      color: #BBB749;
+      color: #FF9900;
     }
-    div.tag7 {
+    div.tag7 a{
+      font-size: 1.7em;
+      font-weight: 300;
+      color: #424242;
+    }
+     div.tag8 a{
+      font-size: 1.9em;
+      font-weight: 400;
+      color: #3299BB;
+    }
+     div.tag9 a{
       font-size: 2.1em;
-      font-weight: 300;
-      color: #BBB749;
-    }
-     div.tag8 {
-      font-size: 2.4em;
-      font-weight: 100;
-      color: #BBB749;
-    }
-     div.tag9 {
-      font-size: 2.7em;
       font-weight: 200;
-      color: #BBB749;
+      color: #F2D43F;
     }
-     div.tag10 {
-      font-size: 3em;
+     div.tag10 a{
+      font-size: 2.3em;
       font-weight: 300;
-      color: #BBB749;
+      color: #61C155;
     }
 }
+
+/* Text */
+
+.breathe {
+  letter-spacing: .2em;
+}
+
+
 
 
 
