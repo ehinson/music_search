@@ -7,4 +7,19 @@ class SearchController < ApplicationController
 
   def create
   end
+
+  def songs
+  end
+
+  def artists
+  end
+
+  def genres
+  end
+
+  def albums
+  end
+
+  def playlists
+  end
 end

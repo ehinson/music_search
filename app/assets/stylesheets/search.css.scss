@@ -404,20 +404,27 @@ table {
   border:none;
   padding-top: 10px;
   padding-bottom: 10px;
-
+  padding-left: 20px;
 }
 
 .content th {
-  font-weight: 400;
+  font-weight: 300;
+  padding-top: 10px;
+  padding-bottom: 10px;
+
 }
 thead {
-  border-bottom: 1px darkorange solid;
+  border-bottom: 1px lightgray solid;
+  border-top: 1px lightgray solid;
+  background-color: whitesmoke;
+  color: gray;
 }
 
 
 tbody tr {
   border-bottom: 1px whitesmoke solid;
   font-size: 85%;
+  padding-left: 20px;
 }
 
 .torange {
