@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'mongoid', '~> 4.0.0'
 gem 'bootstrap-sass', '~> 3.3.1.0'
 gem 'rename'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
