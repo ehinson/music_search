@@ -1,5 +1,15 @@
 Rails.application.routes.draw do
 
+  get 'static_pages/artist'
+
+  get 'static_pages/songs'
+
+  get 'static_pages/genres'
+
+  get 'static_pages/hotttness'
+
+  get 'static_pages/price'
+
   resources :search
 
   root to: 'search#new'

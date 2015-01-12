@@ -6,6 +6,11 @@ class SearchController < ApplicationController
   end
 
   def create
+
+  end
+
+  def show
+    
   end
 
   def songs

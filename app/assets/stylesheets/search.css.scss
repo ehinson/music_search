@@ -11,7 +11,7 @@ a {
   }
   &:hover {
     color: #fff;
-    text-decoration: none;
+    text-decoration: none !important;
   }
 }
 
@@ -23,8 +23,8 @@ a {
 .btn-default:focus {
   color: #333;
   text-shadow: none;
-  background-color: #fff;
-  border: 1px solid #fff;
+  background: none !important;
+  border: none !important;
 }
 
 /* Base Structure */
@@ -99,6 +99,8 @@ div.lead {
   line-height: inherit;
   color:inherit;
   border: none;
+  border-bottom: 1px solid black;
+  text-align: center;
   background: transparent;
   display: inline-block;
   padding: 0;
@@ -154,9 +156,6 @@ div.lead {
   margin: 1em 0 2em;
   font-weight: 200;
   vertical-align: middle;
-  margin-top: 10%;
-  position: fixed;
-  width: 20%;
   float: left;
 }
 
@@ -164,7 +163,7 @@ div.lead {
 
 .tabs nav {
   text-align: left;
-  height: 100%;
+  width: 100%;
 }
 .tabs nav ul {
     padding: 0;
@@ -177,11 +176,10 @@ div.lead {
 .tabs nav ul li {
         border:none;
         margin: 0 0 .25em;
-        display: block;
+        display: inline-block;
         float: left;
-        clear:left;
         position: relative;
-        width: 100%;
+        width: 19%;
 }
 .tabs nav ul li.tab-current {
        border: 1px solid purple;
@@ -231,7 +229,7 @@ div.lead {
 .content {
 
   float: right;
-  width: 80%;
+  width: 100%;
 }
 
 .content section {
@@ -389,6 +387,10 @@ div.effect-milo:hover p {
   background-color: #0E8D94;
 }
 
+.orange-text {
+  color: orange;
+}
+
 .small{
   font-size: 50%;
 }
@@ -400,11 +402,13 @@ table {
   text-align: left;
 }
 
-.content td, th {
+.content td, .content th {
   border:none;
   padding-top: 10px;
   padding-bottom: 10px;
   padding-left: 20px;
+  font-size: .85em;
+
 }
 
 .content th {
@@ -429,5 +433,10 @@ tbody tr {
 
 .torange {
   border-color: orange;
+}
+
+sub span {
+  margin-left: 5px;
+  margin-right: 5px;
 }
 
