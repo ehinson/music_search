@@ -1,10 +1,23 @@
-    <div class="site-wrapper">
+<div class="site-wrapper">
 
       <div class="site-wrapper-inner skin-1">
 
         <div class="cover-container container">
-          <div class= "albums">
-            <section id="section-1" class="">
+          <div id="tabs" class="tabs">
+              <nav>
+                <ul class="tab-browsing">
+                  <li><a href="#section-1" class="icon-1 text-uppercase breathe"><span>Artists</span></a></li>
+                  <li><a href="#section-2" class="icon-2 text-uppercase breathe"><span>Genres</span></a></li>
+                  <li><a href="#section-3" class="icon-3 text-uppercase breathe"><span>Albums</span></a></li>
+                  <li><a href="#section-4" class="icon-4 text-uppercase breathe"><span>Songs</span></a></li>
+                  <li><a href="#section-5" class="icon-5 text-uppercase breathe"><span>Playlists</span></a></li>
+                </ul>
+              </nav>
+            
+            </div><!--tabs-->
+          <div class="content">
+              <%= render 'search'  %>
+                <section id="section-1" class="">
 
                   <div class="mediabox">
 
@@ -12,7 +25,7 @@
                         <div class="effect-milo">
                           <div class="square-inner"></div><!--square-inner-->
                           <div class="caption">
-                            <h2>Artist<span><%= params['search']['artist'] %></span></h2>
+                            <h2>Artist<span><%= params['search']['search'] %></span></h2>
                             <p><small class="breathe">Hottness:92<br>Top Song<br>Song Name<br>More</small></p>
                             <!-- <a href="#">View more</a> -->
                         </div>    <!--caption--> 
@@ -22,7 +35,7 @@
                         <div class="effect-milo">
                           <div class="square-inner"></div><!--square-inner-->
                           <div class="caption">
-                            <h2>Artist<span><%= params['search']['artist'] %></span></h2>
+                            <h2>Artist<span><%= params['search']['search'] %></span></h2>
                             <p><small class="breathe">Hottness:92<br>Top Song<br>Song Name<br>More</small></p>
                             <!-- <a href="#">View more</a> -->
                         </div>    <!--caption--> 
@@ -32,7 +45,7 @@
                         <div class="effect-milo">
                           <div class="square-inner"></div><!--square-inner-->
                           <div class="caption">
-                            <h2>Artist<span><%= params['search']['artist'] %></span></h2>
+                            <h2>Artist<span><%= params['search']['search'] %></span></h2>
                             <p><small class="breathe">Hottness:92<br>Top Song<br>Song Name<br>More</small></p>
                             <!-- <a href="#">View more</a> -->
                         </div>    <!--caption--> 
@@ -42,7 +55,7 @@
                         <div class="effect-milo">
                           <div class="square-inner"></div><!--square-inner-->
                           <div class="caption">
-                            <h2>Artist<span><%= params['search']['artist'] %></span></h2>
+                            <h2>Artist<span><%= params['search']['search'] %></span></h2>
                             <p><small class="breathe">Hottness:92<br>Top Song<br>Song Name<br>More</small></p>
                             <!-- <a href="#">View more</a> -->
                         </div>    <!--caption--> 
@@ -52,7 +65,7 @@
                         <div class="effect-milo">
                           <div class="square-inner"></div><!--square-inner-->
                           <div class="caption">
-                            <h2>Artist<span><%= params['search']['artist'] %></span></h2>
+                            <h2>Artist<span><%= params['search']['search'] %></span></h2>
                             <p><small class="breathe">Hottness:92<br>Top Song<br>Song Name<br>More</small></p>
                             <!-- <a href="#">View more</a> -->
                         </div>    <!--caption--> 
@@ -62,7 +75,7 @@
                         <div class="effect-milo">
                           <div class="square-inner"></div><!--square-inner-->
                           <div class="caption">
-                            <h2>Artist<span><%= params['search']['artist'] %></span></h2>
+                            <h2>Artist<span><%= params['search']['search'] %></span></h2>
                             <p><small class="breathe">Hottness:92<br>Top Song<br>Song Name<br>More</small></p>
                             <!-- <a href="#">View more</a> -->
                         </div>    <!--caption--> 
@@ -72,7 +85,7 @@
                         <div class="effect-milo">
                           <div class="square-inner"></div><!--square-inner-->
                           <div class="caption">
-                            <h2>Artist<span><%= params['search']['artist'] %></span></h2>
+                            <h2>Artist<span><%= params['search']['search'] %></span></h2>
                             <p><small class="breathe">Hottness:92<br>Top Song<br>Song Name<br>More</small></p>
                             <!-- <a href="#">View more</a> -->
                         </div>    <!--caption--> 
@@ -82,7 +95,7 @@
                         <div class="effect-milo">
                           <div class="square-inner"></div><!--square-inner-->
                           <div class="caption">
-                            <h2>Artist<span><%= params['search']['artist'] %></span></h2>
+                            <h2>Artist<span><%= params['search']['search'] %></span></h2>
                             <p><small class="breathe">Hottness:92<br>Top Song<br>Song Name<br>More</small></p>
                             <!-- <a href="#">View more</a> -->
                         </div>    <!--caption--> 
@@ -92,37 +105,7 @@
                         <div class="effect-milo">
                           <div class="square-inner"></div><!--square-inner-->
                           <div class="caption">
-                            <h2>Artist<span><%= params['search']['artist'] %></span></h2>
-                            <p><small class="breathe">Hottness:92<br>Top Song<br>Song Name<br>More</small></p>
-                            <!-- <a href="#">View more</a> -->
-                        </div>    <!--caption--> 
-                      </div><!--effect-milo-->
-                    </div><!--square-->
-                    <div class="square">
-                        <div class="effect-milo">
-                          <div class="square-inner"></div><!--square-inner-->
-                          <div class="caption">
-                            <h2>Artist<span><%= params['search']['artist'] %></span></h2>
-                            <p><small class="breathe">Hottness:92<br>Top Song<br>Song Name<br>More</small></p>
-                            <!-- <a href="#">View more</a> -->
-                        </div>    <!--caption--> 
-                      </div><!--effect-milo-->
-                    </div><!--square-->
-                    <div class="square">
-                        <div class="effect-milo">
-                          <div class="square-inner"></div><!--square-inner-->
-                          <div class="caption">
-                            <h2>Artist<span><%= params['search']['artist'] %></span></h2>
-                            <p><small class="breathe">Hottness:92<br>Top Song<br>Song Name<br>More</small></p>
-                            <!-- <a href="#">View more</a> -->
-                        </div>    <!--caption--> 
-                      </div><!--effect-milo-->
-                    </div><!--square-->
-                    <div class="square">
-                        <div class="effect-milo">
-                          <div class="square-inner"></div><!--square-inner-->
-                          <div class="caption">
-                            <h2>Artist<span><%= params['search']['artist'] %></span></h2>
+                            <h2>Artist<span><%= params['search']['search'] %></span></h2>
                             <p><small class="breathe">Hottness:92<br>Top Song<br>Song Name<br>More</small></p>
                             <!-- <a href="#">View more</a> -->
                         </div>    <!--caption--> 
@@ -131,49 +114,9 @@
                   </div><!--mediabox-->
                   
                 </section>
-          </div>
-          
-          <div class="content">
-            <div class="inner cover grid cloud">
-            <h3 class= "lead"><span class="pull-left">Listing: <%= params['search']['artist'] %></span><span class="pull-right"><script type="text/javascript"> document.write(Math.floor(Math.random()* 10000)+ 1)</script> results<span> 
-            </h3>
-          </div><!--inner-->
-          <div id="tabs" class="tabs">
-              <nav>
-                <ul class="nav nav-tabs">
-                  <li class='<% 'active' if params[:tab].nil?  %>'><a href="create.html" class="icon-1 text-uppercase breathe"><span>Artists</span></a></li>
-                  <li><a href="#section-2" class="icon-2 text-uppercase breathe"><span>Genres</span></a></li>
-                  <li><a href="#section-3" class="icon-3 text-uppercase breathe"><span>Albums</span></a></li>
-                  <li><a href="songs.html" class="icon-4 text-uppercase breathe"><span>Songs</span></a></li>
-                  <li><a href="#section-5" class="icon-5 text-uppercase breathe"><span>Playlists</span></a></li>
-                </ul>
-              </nav>
-            
-            </div><!--tabs-->
-               <section id= "section-2">
-                  <div class="mediabox">
-                    <table>
-                      <thead>
-                        <tr>
-                        <th>Artist  <sub><span class="glyphicon glyphicon-chevron-down orange-text"></span></sub></th>
-                        <th>Songs<sub><span class="glyphicon glyphicon-chevron-down orange-text"></span></sub></th>
-                        <th>Hotttness<sub><span class="glyphicon glyphicon-chevron-down orange-text"></span></sub></th>
-                      </tr>
-                      </thead>
-                      <tbody>
-                        <%  20.times do  %>
-                        <tr>
-                          <td><%= link_to params['search']['artist'], search_index_path %></td>
-                          <td><%= params['search']['song'] %></td>
-                          <td><%= params['search']['hotttness'] %></td>
-                        </tr>
-                        <%  end  %>
 
-                      </tbody>
-                    </table>
-                  </div><!--mediabox-->
-                </section>
-              </div>
+              
+              </div><!--content-->
 
           
         </div><!--cover-container-->

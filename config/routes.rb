@@ -1,16 +1,13 @@
 Rails.application.routes.draw do
 
-  get 'static_pages/artist'
 
-  get 'static_pages/songs'
 
-  get 'static_pages/genres'
-
-  get 'static_pages/hotttness'
-
-  get 'static_pages/price'
-
-  resources :search
+  
+  resources :search do 
+    collection do
+      get 'show'
+    end
+  end
 
   root to: 'search#new'
 

@@ -3,6 +3,7 @@ class SearchController < ApplicationController
   end
 
   def new
+
   end
 
   def create
@@ -11,20 +12,5 @@ class SearchController < ApplicationController
 
   def show
     
-  end
-
-  def songs
-  end
-
-  def artists
-  end
-
-  def genres
-  end
-
-  def albums
-  end
-
-  def playlists
   end
 end
