@@ -1,0 +1,137 @@
+          <div class= "albums">
+            <section id="section-1" class="">
+
+                  <div class="mediabox">
+
+                     <div class="square">
+                        <div class="effect-milo">
+                          <div class="square-inner"></div><!--square-inner-->
+                          <div class="caption">
+                            <h2>Artist<span><%= params['search']['artist'] %></span></h2>
+                            <p><small class="breathe">Hottness:92<br>Top Song<br>Song Name<br>More</small></p>
+                            <!-- <a href="#">View more</a> -->
+                        </div>    <!--caption--> 
+                      </div><!--effect-milo-->
+                    </div><!--square-->
+                    <div class="square">
+                        <div class="effect-milo">
+                          <div class="square-inner"></div><!--square-inner-->
+                          <div class="caption">
+                            <h2>Artist<span><%= params['search']['artist'] %></span></h2>
+                            <p><small class="breathe">Hottness:92<br>Top Song<br>Song Name<br>More</small></p>
+                            <!-- <a href="#">View more</a> -->
+                        </div>    <!--caption--> 
+                      </div><!--effect-milo-->
+                    </div><!--square-->
+                    <div class="square">
+                        <div class="effect-milo">
+                          <div class="square-inner"></div><!--square-inner-->
+                          <div class="caption">
+                            <h2>Artist<span><%= params['search']['artist'] %></span></h2>
+                            <p><small class="breathe">Hottness:92<br>Top Song<br>Song Name<br>More</small></p>
+                            <!-- <a href="#">View more</a> -->
+                        </div>    <!--caption--> 
+                      </div><!--effect-milo-->
+                    </div><!--square-->
+                    <div class="square">
+                        <div class="effect-milo">
+                          <div class="square-inner"></div><!--square-inner-->
+                          <div class="caption">
+                            <h2>Artist<span><%= params['search']['artist'] %></span></h2>
+                            <p><small class="breathe">Hottness:92<br>Top Song<br>Song Name<br>More</small></p>
+                            <!-- <a href="#">View more</a> -->
+                        </div>    <!--caption--> 
+                      </div><!--effect-milo-->
+                    </div><!--square-->
+                    <div class="square">
+                        <div class="effect-milo">
+                          <div class="square-inner"></div><!--square-inner-->
+                          <div class="caption">
+                            <h2>Artist<span><%= params['search']['artist'] %></span></h2>
+                            <p><small class="breathe">Hottness:92<br>Top Song<br>Song Name<br>More</small></p>
+                            <!-- <a href="#">View more</a> -->
+                        </div>    <!--caption--> 
+                      </div><!--effect-milo-->
+                    </div><!--square-->
+                    <div class="square">
+                        <div class="effect-milo">
+                          <div class="square-inner"></div><!--square-inner-->
+                          <div class="caption">
+                            <h2>Artist<span><%= params['search']['artist'] %></span></h2>
+                            <p><small class="breathe">Hottness:92<br>Top Song<br>Song Name<br>More</small></p>
+                            <!-- <a href="#">View more</a> -->
+                        </div>    <!--caption--> 
+                      </div><!--effect-milo-->
+                    </div>
+                    <div class="square">
+                        <div class="effect-milo">
+                          <div class="square-inner"></div><!--square-inner-->
+                          <div class="caption">
+                            <h2>Artist<span><%= params['search']['artist'] %></span></h2>
+                            <p><small class="breathe">Hottness:92<br>Top Song<br>Song Name<br>More</small></p>
+                            <!-- <a href="#">View more</a> -->
+                        </div>    <!--caption--> 
+                      </div><!--effect-milo-->
+                    </div><!--square-->
+                    <div class="square">
+                        <div class="effect-milo">
+                          <div class="square-inner"></div><!--square-inner-->
+                          <div class="caption">
+                            <h2>Artist<span><%= params['search']['artist'] %></span></h2>
+                            <p><small class="breathe">Hottness:92<br>Top Song<br>Song Name<br>More</small></p>
+                            <!-- <a href="#">View more</a> -->
+                        </div>    <!--caption--> 
+                      </div><!--effect-milo-->
+                    </div><!--square-->
+                    <div class="square">
+                        <div class="effect-milo">
+                          <div class="square-inner"></div><!--square-inner-->
+                          <div class="caption">
+                            <h2>Artist<span><%= params['search']['artist'] %></span></h2>
+                            <p><small class="breathe">Hottness:92<br>Top Song<br>Song Name<br>More</small></p>
+                            <!-- <a href="#">View more</a> -->
+                        </div>    <!--caption--> 
+                      </div><!--effect-milo-->
+                    </div><!--square-->
+                    <div class="square">
+                        <div class="effect-milo">
+                          <div class="square-inner"></div><!--square-inner-->
+                          <div class="caption">
+                            <h2>Artist<span><%= params['search']['artist'] %></span></h2>
+                            <p><small class="breathe">Hottness:92<br>Top Song<br>Song Name<br>More</small></p>
+                            <!-- <a href="#">View more</a> -->
+                        </div>    <!--caption--> 
+                      </div><!--effect-milo-->
+                    </div><!--square-->
+                    <div class="square">
+                        <div class="effect-milo">
+                          <div class="square-inner"></div><!--square-inner-->
+                          <div class="caption">
+                            <h2>Artist<span><%= params['search']['artist'] %></span></h2>
+                            <p><small class="breathe">Hottness:92<br>Top Song<br>Song Name<br>More</small></p>
+                            <!-- <a href="#">View more</a> -->
+                        </div>    <!--caption--> 
+                      </div><!--effect-milo-->
+                    </div><!--square-->
+                    <div class="square">
+                        <div class="effect-milo">
+                          <div class="square-inner"></div><!--square-inner-->
+                          <div class="caption">
+                            <h2>Artist<span><%= params['search']['artist'] %></span></h2>
+                            <p><small class="breathe">Hottness:92<br>Top Song<br>Song Name<br>More</small></p>
+                            <!-- <a href="#">View more</a> -->
+                        </div>    <!--caption--> 
+                      </div><!--effect-milo-->
+                    </div><!--square-->
+                  </div><!--mediabox-->
+                  
+                </section>
+          </div>
+
+colors:
+          #00B2E6
+
+          #FFB400
+
+          #014C6B
+

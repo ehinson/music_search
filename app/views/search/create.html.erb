@@ -1,4 +1,4 @@
-    <div class="site-wrapper">
+ <div class="site-wrapper">
 
       <div class="site-wrapper-inner skin-1">
 
@@ -6,46 +6,89 @@
 
           <div class="content">
             <div class="inner cover grid cloud">
-              <h3 class= "lead"><span class="pull-left">Listing: <%= params['search']['artist'] %></span><span class="pull-right"><script type="text/javascript"> document.write(Math.floor(Math.random()* 10000)+ 1)</script> results<span> 
+              <h3 class= "lead"><span class="pull-left">Listing: <%= params['search']['artist'] %> </span><span class="pull-right"><%= add_results  %> results<span> 
               </h3>
             </div><!--inner-->
             <div id="tabs" class="tabs">
               <nav>
                 <ul class="nav nav-tabs">
-                  <li class='<% 'active' if params[:tab].nil?  %>'><a href="create.html" class="icon-1 text-uppercase breathe"><span>Artists</span></a></li>
-                  <li><a href="#section-2" class="icon-2 text-uppercase breathe"><span>Genres</span></a></li>
-                  <li><a href="#section-3" class="icon-3 text-uppercase breathe"><span>Albums</span></a></li>
-                  <li><a href="songs.html" class="icon-4 text-uppercase breathe"><span>Songs</span></a></li>
+                  
+                  <li class='active'><%= link_to '#', :class=> 'text-uppercase breathe', :id => 'artist-tab', :onclick => 'showTab(this.id); return false;' do %>
+                    Artists
+                    (<%= @artists.count  %>)
+                  <%  end  %>
+                  </li>
+                  <li ><%= link_to '#', :id => 'song-tab', :class=> 'text-uppercase breathe', :onclick => 'showTab(this.id); return false;' do %>
+                    Songs
+                    (<%= @tracks.count  %>)
+                  <%  end  %>
+                  </li>
+                  <li><%= link_to '#', :id => 'album-tab', :class=> 'text-uppercase breathe',:onclick => 'showTab(this.id); return false;' do %>
+                    Albums
+                    (<%= @albums.count  %>)
+                  <%  end  %>
+                  </li>
+                  <li><%= link_to '#', :id => 'genres-tab', :class=> 'text-uppercase breathe',:onclick => 'showTab(this.id); return false;' do %>
+                    Genres
+                    <% @artists.each do  |artist| %>
+                    (<%= artist.genres.count %>)
+                <%  end  %>
+                  <%  end  %>
+                  </li>
                   <li><a href="#section-5" class="icon-5 text-uppercase breathe"><span>Playlists</span></a></li>
                 </ul>
               </nav>
 
             </div><!--tabs-->
-            <section id= "section-2">
-              <div>
-                <% @artists.each do |artist| %>
-                <div class="result one-fifth ">
-                  <div class="feature-image"><img src="http://placehold.it/150x150"></div>
-                  <div class="info"><%= params['search']['artist'] %>
-                    <%= artist.name %>
-                    <%= params['search']['song'] %>
-                    <%= params['search']['hotttness'] %></div>
-                    <div class="info2">
-                      <div class="one-third left"> <strong>Text</strong><br>Text</div>
-                      <div class="one-third middle">  <strong>Text</strong><br>Text</div>
-                      <div class="one-third right"> <strong>Text</strong><br>Text</div>
-                    </div>
-                  </div>
+
+            <section id= "artist-tab" class="artist-tab">
+              <div class= "artist">
+                <% @artists.each do  |artist| %>
+                <div class="result one-fifth">
+                  <div class="feature-image">
+                    <img src="http://placehold.it/150x150">
+                  </div><!--feature-image-->
+                  <div class="info">
+                    <strong><%= artist.name  %></strong><br>
+                    (<%= artist.songs.size  %>) songs<br>
+                    <%  artist.songs.each do |song| %>
+                      <%= song  %><br>
+                    <%  end  %>
+                  </div><!--info-->
+                  <div class="info2">
+                      <div class="one-third left"> (<%= @albums.count  %>) albums</div><!--left-->
+                      <div class="one-third middle"> (<%= @tracks.count  %>) songs</div><!--middle-->
+                      <div class="one-third right"> <strong>Text</strong><br>Text</div><!--right-->
+                  </div><!--info2-->
+                </div><!--result-->
                   <%  end  %>
 
-                </div>
-              </div>
-            </div><!--mediabox-->
-          </section>
-        </div>
+              </div><!--artist-->
+            </section>
 
+            <section id= "song-tab" class="hide">
+              <div class= "song">
+                <% @tracks.map(&:name).each do |track| %>
+                  <%= track %><br>
+                <%  end  %>
 
-      </div><!--cover-container-->
+              </div><!--song-->
+            </section>
 
-    </div><!--site-wrapper-inner-->
-  </div><!--site-wrapper-->
+            <section id= "album-tab" class="hide">
+              <div class= "album">
+                <%  @albums.map(&:name).each do |album|  %>
+                  <%= album  %> <br>
+                  <%  end  %>
+              </div><!--album-->
+            </section>
+
+            <section id= "genres-tab" class="hide">
+              <div class= "genres">
+                <% @artists.each do  |artist| %>
+                  <% artist.genres.each do |g| %>
+                    <p><%=  g  %></p>
+                    <%  end  %>
+                <%  end  %>
+              </div><!--genres-->
+            </section>

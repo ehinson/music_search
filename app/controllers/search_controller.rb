@@ -1,26 +1,27 @@
 class SearchController < ApplicationController
+  helper_method :add_results
   def index
 
   end
 
   def new
-    @artists = Artist.all
-    @tracks = Track.all
-    @albums = Album.all
 
   end
 
   def create
-    @artists = Artist.where(:name => '/params['search']['artist'])
-    @tracks = Track.where(:artist => 'Chris Brown')
-    # @albums = Album.all
-
-
-    # @artist = Artist.where(name: /^"#{params['search']['artist']}"$/)
-
+    @artists = Artist.where(:name => params['search']['artist'] )
+    @tracks = Track.where(:artist => params['search']['artist']).entries
+    @albums = Album.where(:artist => params['search']['artist']).entries
+  
   end
 
   def show
-    
+
+
   end
+  
+  def add_results
+    @artists.count + @tracks.count + @albums.count
+  end
+
 end

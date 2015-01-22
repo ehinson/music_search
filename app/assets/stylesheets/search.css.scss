@@ -175,7 +175,7 @@ div.lead {
 
 .tabs nav ul li {
         border:none;
-        margin: 0 0 .25em;
+        background: none;
         display: inline-block;
         float: left;
         position: relative;
@@ -213,6 +213,7 @@ div.lead {
     white-space: nowrap;
     font-weight:100;
     text-align: center;
+    background: none;
   }
 
 .tabs nav a:hover {

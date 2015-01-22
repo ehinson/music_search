@@ -1,0 +1,19 @@
+                <% @artists.each do |artist| %>
+                <div class="result one-fifth">
+                  <div class="feature-image">
+                    <img src="http://placehold.it/150x150">
+                  </div><!--feature-image-->
+                  <div class="info">
+                    <%= params['search']['artist'] %>
+                    <%= artist.name %>
+                    <%= params['search']['song'] %>
+                    <%= params['search']['hotttness'] %>
+                  </div><!--info-->
+                  <div class="info2">
+                      <div class="one-third left"> <strong>Text</strong><br> Text</div><!--left-->
+                      <div class="one-third middle">  <strong>Text</strong><br>Text</div><!--middle-->
+                      <div class="one-third right"> <strong>Text</strong><br>Text</div><!--right-->
+                  </div><!--info2-->
+                </div><!--result-->
+                  <%  end  %>
+
