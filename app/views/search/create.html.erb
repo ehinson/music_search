@@ -44,51 +44,76 @@
             <section id= "artist-tab" class="artist-tab">
               <div class= "artist">
                 <% @artists.each do  |artist| %>
-                <div class="result one-fifth">
-                  <div class="feature-image">
-                    <img src="http://placehold.it/150x150">
-                  </div><!--feature-image-->
-                  <div class="info">
-                    <strong><%= artist.name  %></strong><br>
+                <div class="result col-md-2">
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <img src="http://placehold.it/150x150">
+                    </div>
+                    <div class="panel-body">
+                      <strong><%= artist.name  %></strong><br>
                     (<%= artist.songs.size  %>) songs<br>
                     <%  artist.songs.each do |song| %>
-                      <%= song  %><br>
+                    <%= song  %><br>
                     <%  end  %>
-                  </div><!--info-->
-                  <div class="info2">
-                      <div class="one-third left"> (<%= @albums.count  %>) albums</div><!--left-->
-                      <div class="one-third middle"> (<%= @tracks.count  %>) songs</div><!--middle-->
-                      <div class="one-third right"> <strong>Text</strong><br>Text</div><!--right-->
-                  </div><!--info2-->
+                    </div>
+                    <div class="panel-footer">
+                      (<%= @albums.count  %>) albums
+                      (<%= @tracks.count  %>) songs
+                    </div>
+                  </div>
                 </div><!--result-->
-                  <%  end  %>
-
+                <%  end  %>
               </div><!--artist-->
             </section>
 
             <section id= "song-tab" class="hide">
               <div class= "song">
-                <% @tracks.map(&:name).each do |track| %>
-                  <%= track %><br>
-                <%  end  %>
-
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    Music Player?
+                  </div><!--panel-heading-->
+                  <table class="table">
+                    <% @tracks.map(&:name).each do |track| %>
+                    <tr>
+                      <td><%= track %></td>
+                    </tr>
+                    <%  end  %>  
+                  </table><!-- Table -->
+                </div><!--panel-->
               </div><!--song-->
             </section>
 
             <section id= "album-tab" class="hide">
               <div class= "album">
-                <%  @albums.map(&:name).each do |album|  %>
-                  <%= album  %> <br>
-                  <%  end  %>
-              </div><!--album-->
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    Albums
+                  </div><!--panel-heading-->
+                  <table class="table">
+                    <%  @albums.map(&:name).each do |album|  %>
+                    <tr>
+                      <td><%= album  %></td>
+                    </tr>
+                    <%  end  %>  
+                  </table><!-- Table -->
+                </div><!--panel-->
             </section>
 
             <section id= "genres-tab" class="hide">
               <div class= "genres">
-                <% @artists.each do  |artist| %>
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    Genres
+                  </div><!--panel-heading-->
+                  <table class="table">
+                    <% @artists.each do  |artist| %>
                   <% artist.genres.each do |g| %>
-                    <p><%=  g  %></p>
+                    <tr>
+                      <td><%=  g  %></td>
+                    </tr>
+                    <%  end  %>  
                     <%  end  %>
-                <%  end  %>
+                  </table><!-- Table -->
+                </div><!--panel-->
               </div><!--genres-->
             </section>
