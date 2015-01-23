@@ -5,7 +5,10 @@
         <div class="cover-container">
 
           <div class="inner cover">
-            Listing: <%= params['search']['artist'] %> 
+            Listing: <%= params['search'] %> <br><%= @hotttnesss  %>
+            Listing:<% @artists.map(&:name).each do |artist|  %>
+              <%= artist  %>
+              <%  end  %>
           </div>
         </div>
 

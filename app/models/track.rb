@@ -1,3 +1,4 @@
+
 class Track
   include Mongoid::Document
   include Mongoid::Timestamps
@@ -40,4 +41,5 @@ class Track
   field :hotttnesss, type: Float
   field :discovery, type: Float
   field :currency, type: Float
+
 end

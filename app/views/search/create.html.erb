@@ -40,7 +40,6 @@
               </nav>
 
             </div><!--tabs-->
-
             <section id= "artist-tab" class="artist-tab">
               <div class= "artist">
                 <% @artists.each do  |artist| %>
@@ -50,15 +49,19 @@
                       <img src="http://placehold.it/150x150">
                     </div>
                     <div class="panel-body">
-                      <strong><%= artist.name  %></strong><br>
-                    (<%= artist.songs.size  %>) songs<br>
-                    <%  artist.songs.each do |song| %>
-                    <%= song  %><br>
-                    <%  end  %>
+                      <strong><%= artist.name  %></strong><br><br>
+                      <%  artist.songs.each do |song| %>
+                      <em><%= song  %></em><br>
+                <%  end  %>
+
+                <%= link_to url: {action: "create"}, search: artist.hotttnesss do %>
+
+                  <%= artist.hotttnesss  %>
+                <%  end  %>
                     </div>
-                    <div class="panel-footer">
-                      (<%= @albums.count  %>) albums
-                      (<%= @tracks.count  %>) songs
+                    <div class="panel-footer text-left">
+                      <%= @albums.count  %> <strong>albums</strong> 
+                      <span class="pull-right"><%= @tracks.count  %> <strong>songs</strong></span>
                     </div>
                   </div>
                 </div><!--result-->
@@ -67,12 +70,18 @@
             </section>
 
             <section id= "song-tab" class="hide">
+
               <div class= "song">
                 <div class="panel panel-default">
-                  <div class="panel-heading">
-                    Music Player?
+                  <div class="panel-heading text-left">
+                    <span class="glyphicon glyphicon-play"></span>
+                    <div class= "progress"></div>
+                    <div class= "song-title text-center"><%= @tracks.map(&:name).first%></div>
+                    <span class="glyphicon glyphicon-volume-up"></span>
+                    <div class="volume"></div>
                   </div><!--panel-heading-->
                   <table class="table">
+
                     <% @tracks.map(&:name).each do |track| %>
                     <tr>
                       <td><%= track %></td>
@@ -107,11 +116,11 @@
                   </div><!--panel-heading-->
                   <table class="table">
                     <% @artists.each do  |artist| %>
-                  <% artist.genres.each do |g| %>
+                     <% artist.genres.each do |g| %>
                     <tr>
                       <td><%=  g  %></td>
                     </tr>
-                    <%  end  %>  
+                     <%  end  %>  
                     <%  end  %>
                   </table><!-- Table -->
                 </div><!--panel-->
