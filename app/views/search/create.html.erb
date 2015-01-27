@@ -30,9 +30,7 @@
                   </li>
                   <li><%= link_to '#', :id => 'genres-tab', :class=> 'text-uppercase breathe',:onclick => 'showTab(this.id); return false;' do %>
                     Genres
-                    <% @artists.each do  |artist| %>
-                    (<%= artist.genres.count %>)
-                <%  end  %>
+                    (<%= total_genres  %>)
                   <%  end  %>
                   </li>
                   <li><a href="#section-5" class="icon-5 text-uppercase breathe"><span>Playlists</span></a></li>
@@ -42,30 +40,42 @@
             </div><!--tabs-->
             <section id= "artist-tab" class="artist-tab">
               <div class= "artist">
-                <% @artists.each do  |artist| %>
-                <div class="result col-md-2">
-                  <div class="panel panel-default">
-                    <div class="panel-heading">
-                      <img src="http://placehold.it/150x150">
+                <div class="row">
+                  <% count = 0 %>
+                  <% @artists.each do  |artist| %>
+                    <% count = count + 1 %>
+                    <% if count > 6 %>
+                      <div class="row">
+                        <% count = 1 %>
+                    <% end %>
+                    <div class="result col-md-2">
+                      <div class="panel panel-default">
+                        <div class="panel-heading">
+                          <img src="http://placehold.it/150x150">
+                        </div>
+                        <div class="panel-body">
+                          <strong><%= artist.name  %></strong><br><br>
+                          <%  artist.songs.each do |song| %>
+                            <em><%= song  %></em><br>
+                          <% end if artist.songs.present? %>
+                          <%= link_to url: {action: "create"}, search: artist.hotttnesss do %>
+                            <%= artist.hotttnesss  %>
+                          <% end %>
+                        </div>
+                        <div class="panel-footer text-left">
+                          <%= @albums.count  %> <strong>albums</strong> 
+                          <span class="pull-right"><%= @tracks.count  %> <strong>songs</strong></span>
+                        </div>
+                      </div>
+                    </div><!--result-->
+                    <% if count.eql?(6) %>
+                      </div>
+                    <% end  %>
+                  <%  end  %>
+                  <% if count > 5 %>
                     </div>
-                    <div class="panel-body">
-                      <strong><%= artist.name  %></strong><br><br>
-                      <%  artist.songs.each do |song| %>
-                      <em><%= song  %></em><br>
-                <%  end  %>
-
-                <%= link_to url: {action: "create"}, search: artist.hotttnesss do %>
-
-                  <%= artist.hotttnesss  %>
-                <%  end  %>
-                    </div>
-                    <div class="panel-footer text-left">
-                      <%= @albums.count  %> <strong>albums</strong> 
-                      <span class="pull-right"><%= @tracks.count  %> <strong>songs</strong></span>
-                    </div>
-                  </div>
-                </div><!--result-->
-                <%  end  %>
+                  <% end %>
+                </div> <!-- row -->
               </div><!--artist-->
             </section>
 
@@ -81,11 +91,16 @@
                     <div class="volume"></div>
                   </div><!--panel-heading-->
                   <table class="table">
-
+                    
                     <% @tracks.map(&:name).each do |track| %>
-                    <tr>
-                      <td><%= track %></td>
-                    </tr>
+                      <tr>
+                       <td><%= track %></td>
+                      </tr>
+                    <%  end  %>  
+                    <% @tracks.map(&:artist).each do |artist| %>
+                      <tr>
+                        <td><%= artist %></td>
+                      </tr>
                     <%  end  %>  
                   </table><!-- Table -->
                 </div><!--panel-->
@@ -100,9 +115,9 @@
                   </div><!--panel-heading-->
                   <table class="table">
                     <%  @albums.map(&:name).each do |album|  %>
-                    <tr>
-                      <td><%= album  %></td>
-                    </tr>
+                      <tr>
+                        <td><%= album  %></td>
+                      </tr>
                     <%  end  %>  
                   </table><!-- Table -->
                 </div><!--panel-->
@@ -116,11 +131,11 @@
                   </div><!--panel-heading-->
                   <table class="table">
                     <% @artists.each do  |artist| %>
-                     <% artist.genres.each do |g| %>
-                    <tr>
-                      <td><%=  g  %></td>
-                    </tr>
-                     <%  end  %>  
+                      <% artist.genres.each do |g| %>
+                        <tr>
+                          <td><%=  g  %></td>
+                        </tr>
+                     <%  end if artist.genres.present?  %>  
                     <%  end  %>
                   </table><!-- Table -->
                 </div><!--panel-->
