@@ -58,7 +58,7 @@
                           <%  artist.songs.each do |song| %>
                             <em><%= song  %></em><br>
                           <% end if artist.songs.present? %>
-                          <%= link_to url: {action: "create"}, search: artist.hotttnesss do %>
+                          <%= link_to search_index_path(search: artist.hotttnesss) do %>
                             <%= artist.hotttnesss  %>
                           <% end %>
                         </div>
@@ -86,22 +86,19 @@
                   <div class="panel-heading text-left">
                     <span class="glyphicon glyphicon-play"></span>
                     <div class= "progress"></div>
-                    <div class= "song-title text-center"><%= @tracks.map(&:name).first%></div>
+                    <div class= "song-title text-center">
+                      <%= @tracks.map(&:name).first%>
+                    </div>
                     <span class="glyphicon glyphicon-volume-up"></span>
                     <div class="volume"></div>
                   </div><!--panel-heading-->
                   <table class="table">
-                    
-                    <% @tracks.map(&:name).each do |track| %>
+                    <% @tracks.each do |track| %>
                       <tr>
-                       <td><%= track %></td>
+                        <td><%= track.name  %></td>
+                        <td><%= track.artist  %></td>
                       </tr>
-                    <%  end  %>  
-                    <% @tracks.map(&:artist).each do |artist| %>
-                      <tr>
-                        <td><%= artist %></td>
-                      </tr>
-                    <%  end  %>  
+                    <%  end  %>                    
                   </table><!-- Table -->
                 </div><!--panel-->
               </div><!--song-->
@@ -141,3 +138,6 @@
                 </div><!--panel-->
               </div><!--genres-->
             </section>
+
+
+            

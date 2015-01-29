@@ -1,0 +1,10 @@
+<% @tracks.map(&:name).each do |track| %>
+                      <tr>
+                       <td><%= track %></td>
+                      </tr>
+                    <%  end  %>  
+                    <% @tracks.map(&:artist).each do |artist| %>
+                      <tr>
+                        <td><%= artist %></td>
+                      </tr>
+                    <%  end  %>  

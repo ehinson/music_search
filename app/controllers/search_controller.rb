@@ -1,12 +1,15 @@
 class SearchController < ApplicationController
   helper_method :add_results
+
   def index
 
     @hotttnesss = params['search']
 
-    @artists = Artist.where(:hotttnesss.gt => params['search'].to_f - 0.001).where(:hotttnesss.lt => params['search'].to_f + 0.001).entries
-    @tracks = Track.where(:artist => params['search']['artist']).entries
-    @albums = Album.where(:artist => params['search']['artist']).entries
+    @artists = Artist.where(:hotttnesss.gt => params['search'].to_f - 0.001).where(:hotttnesss.lt => params['search'].to_f + 0.001).order_by([:hotttnesss, :desc]).entries
+
+    @tracks = Track.where(:artist => /#{params['search']['artist']}/i).entries
+
+    @albums = Album.where(:artist => /#{params['search']['artist']}/i).entries
 
   end
 
@@ -30,9 +33,9 @@ class SearchController < ApplicationController
 
   def show
     @hotttnesss = params['search']
-    @artists = Artist.where(:hotttnesss => @hotttnesss)
-    @tracks = Track.where(:artist => params['search']['artist']).entries
-    @albums = Album.where(:artist => params['search']['artist']).entries
+
+    @artists = Artist.where(:hotttnesss.gt => params['search'].to_f - 0.001).where(:hotttnesss.lt => params['search'].to_f + 0.001).order_by([:hotttnesss, :desc]).entries
+    
 
   end
   
