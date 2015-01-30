@@ -5,7 +5,6 @@ class Track
  
   index({starred: 1})
  
- 
   field :album_id, type: String
   field :name, type: String
   field :grid, type: String

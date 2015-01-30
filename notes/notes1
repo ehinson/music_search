@@ -123,3 +123,27 @@
          
       </div><!--site-wrapper-inner-->
     </div><!--site-wrapper-->
+
+    <%= link_to url: {action: "create"}, search: artist.hotttnesss do %>
+                            <%= artist.hotttnesss  %>
+                          <% end %>
+
+
+                          <%  arr = []  %>
+              <% @tracks.map(&:tempo).each do |tempo| %>
+                <% @arr << tempo %>
+                <%  return @arr  %>
+              <% end %>
+              <%  @average_tempo = @arr.inject(0.0) {|sum, el| sum + el}.to_f / @arr.size  %>
+              <%  @similar_tracks = @tracks.where(:tempo => @average_tempo).entries  %>
+
+              <% similar_track(.each do |similar|  %>
+                <%= similar[:name] %> <%= similar[:artist] %>  Similar!<br>
+              <%  end  %>
+
+<%= @tracks.count %> tracks <br>
+              <% @tracks.each do |track| %>
+                <%= track[:name] %>
+                <strong><%= track[:artist] %></strong><br>
+              <%  end  %> 
+              

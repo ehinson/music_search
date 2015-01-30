@@ -5,18 +5,28 @@
         <div class="cover-container">
 
           <div class="inner cover">
+
             Listing: 
               <%= params['search'] %> <br>
-              <%= params['search']['artist'] %> <br>
             Listing: 
-              <%= @hotttnesss  %><br>
+              <%=  params['artist']%><br>
             Listing:
               <% @artists.map(&:name).each do |artist|  %>
                 <%= artist  %><br>
               <%  end  %>
-              <%= @artists.count %>
+            
+            Listing: 
+
+              <% @similar_tracks.map(&:name).each do |similar|  %>
+                <%= similar  %> Similar!
+              <%  end  %>
+
+              <%= @tracks.count %> tracks <br>
+              <% @tracks.each do |track| %>
+                <%= track[:name] %>
+                <strong><%= track[:artist] %></strong><br>
+              <%  end  %>              
           </div>
         </div>
-
       </div>
     </div>

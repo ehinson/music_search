@@ -13,16 +13,13 @@ module SearchHelper
     total
   end
 
-  # def similar_tempo
-  #     arr = []
-
-  #     @tracks.map(&:tempo).each do |tempo|
-  #       arr << tempo
-  #     end
-
-  #     @average_tempo = arr.inject(0.0) {|sum, el| sum + el}/ arr.size
-
-  #     @similar_tracks = Track.where(:tempo => @average_tempo).entries
-  # end
+  def hello
+    i = 5
+    10.times do
+      puts "hi"
+      puts i
+      i = i -1
+    end   
+  end
 
 end

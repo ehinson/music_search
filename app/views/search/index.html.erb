@@ -5,17 +5,51 @@
         <div class="cover-container">
 
           <div class="inner cover">
+
             Listing: 
               <%= params['search'] %> <br>
             Listing: 
-              <%= @hotttnesss  %><br>
-            Listing:
+              <%=  params['artist']%><br>
+            <div class="panel panel-default">
+              <div class="panel-heading text-left">
+                Similar Hotttnesss:
+              </div>
               <% @artists.map(&:name).each do |artist|  %>
                 <%= artist  %><br>
               <%  end  %>
-              
+            </div>
+            
+            <div class="panel panel-default">
+              <div class="panel-heading text-left">
+                Related Artists:
+              </div><!--/.panel-heading-->
+              <% @similar_artists.each do |artist| %>
+                <%= artist  %><br>
+                <%  end  %>
+            </div>
+
+            <div class="panel panel-default">
+              <div class="panel-heading text-left">
+                Related Tracks:
+              </div>
+              <% @similar_artists.each do |artist| %>
+                <% similar_track(artist).each do |track|  %>
+                  <span class="pull-left"><%= track[:name] %></span><span class="pull-right"> <%= track[:artist] %></span><br>
+                <%  end  %>
+              <%  end  %> 
+            </div>              
+
+            <div class="panel panel-default">
+              <div class="panel-heading text-left">
+                Similar Tempo:
+              </div>
+              <%= @tracks.count %> tracks <br>
+              <% @tracks.each do |track| %>
+                <%= track[:name] %>
+                <strong><%= track[:artist] %></strong><br>
+              <%  end  %> 
+            </div>              
           </div>
         </div>
-
       </div>
     </div>

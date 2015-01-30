@@ -58,7 +58,7 @@
                           <%  artist.songs.each do |song| %>
                             <em><%= song  %></em><br>
                           <% end if artist.songs.present? %>
-                          <%= link_to search_index_path(search: artist.hotttnesss) do %>
+                          <%= link_to url: {action: "create"}, search: artist.hotttnesss, artist: artist.name do %>
                             <%= artist.hotttnesss  %>
                           <% end %>
                         </div>
