@@ -48,7 +48,17 @@
                 <%= track[:name] %>
                 <strong><%= track[:artist] %></strong><br>
               <%  end  %> 
-            </div>              
+            </div>          
+
+             <div class="panel panel-default">
+              <div class="panel-heading text-left">
+                Local Artists:
+              </div>
+              <% local_artists.each do |a| %>
+                <%= a  %><br>
+              <%  end  %>
+            </div>          
+
           </div>
         </div>
       </div>

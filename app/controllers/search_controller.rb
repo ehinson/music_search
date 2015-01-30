@@ -29,7 +29,8 @@ class SearchController < ApplicationController
     
     @similar_artists = similar_artist(params['artist'])
 
-    @similar_genre_artist = Artist.where(similar_genre(params['artist'].)
+    
+
   end
 
   def new

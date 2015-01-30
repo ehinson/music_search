@@ -23,5 +23,15 @@ module ApplicationHelper
     end
     @genres
   end
-  
+
+  def local_artists
+    @loc = []
+    @local = JSON.parse(open(URI.encode("http://developer.echonest.com/api/v4/artist/search?api_key=NSWIO5XPDVJM8EN5F&format=json&artist_location=boston&bucket=artist_location")).read)
+    @loc_artist = @local['response']['artists']
+    @loc_artist.each do |a|
+      @loc << a['name']
+    end
+    @loc
+  end
+
 end
