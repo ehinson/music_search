@@ -1,10 +1,14 @@
 class SearchController < ApplicationController
-  helper_method :add_results, :similar, :hi_there
+  helper_method :add_results, :similar
 
   require 'open-uri'
   require 'json'
+  require 'yaml'
+  require 'uri'
 
   include ApplicationHelper
+
+
 
   def index
     @hotttnesss = params['search']
@@ -28,7 +32,7 @@ class SearchController < ApplicationController
     @sim = []
     
     @similar_artists = similar_artist(params['artist'])
-
+    
     
 
   end
@@ -44,6 +48,7 @@ class SearchController < ApplicationController
     @tracks = Track.where(:artist => /#{params['search']['artist']}/i).entries
 
     @albums = Album.where(:artist => /#{params['search']['artist']}/i).entries
+
     @genres = @artists.each do |artist|
       artist.genres
     end

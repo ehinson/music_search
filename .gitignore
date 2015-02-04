@@ -16,4 +16,5 @@
 /tmp
 
 #Ignore database configuration
+/config/echonest.yml
 /config/database.yml
