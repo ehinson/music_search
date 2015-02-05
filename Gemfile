@@ -32,6 +32,18 @@ gem 'spring',        group: :development
 
 gem 'pry'
 
+gem 'rspec', '~> 3.2.0'
+
+gem 'rspec-rails', '~> 3.2.0'
+
+gem 'webrat', '~> 0.7.3'
+
+group :test do
+  gem 'cucumber-rails', :require => false
+  # database_cleaner is not required, but highly recommended
+  gem 'database_cleaner'
+end
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

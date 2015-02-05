@@ -20,7 +20,7 @@ module ApplicationHelper
       @sim << @sim_artist
     end 
 
-    while @sim.length < 2
+    while @sim.length < 3
       similar_artist(@sim_artist)
     end
 
