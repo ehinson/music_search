@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
 
-
+  get 'static_pages/hotttness'
   
   resources :search do 
     collection do

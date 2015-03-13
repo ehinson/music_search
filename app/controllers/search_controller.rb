@@ -31,7 +31,7 @@ class SearchController < ApplicationController
 
     @sim = []
     
-    @similar_artists = similar_artist(params['artist'])
+    @similar_artists = Echonest.similar_artist(params['artist'])
     
     
 

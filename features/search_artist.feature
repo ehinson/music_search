@@ -9,3 +9,4 @@ Feature: Search Artists
     When I press "submit"
     Then I should see search results
 
+

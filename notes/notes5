@@ -1,0 +1,10 @@
+Click on similar artist if similar artist is in Sony database
+
+select * from artist in controller 
+
+loop through in the view
+
+create a model 
+
+Class Echonest end
+def self.similar artist

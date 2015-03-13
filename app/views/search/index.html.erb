@@ -32,7 +32,7 @@
                 Related Tracks:
               </div>
               <% @similar_artists.each do |artist| %>
-                <% similar_track(artist).each do |track|  %>
+                <% Echonest.similar_track(artist).each do |track|  %>
                   <span class="pull-left"><%= track[:name] %></span><span class="pull-right"> <%= track[:artist] %></span><br>
                 <%  end  %>
               <%  end  %> 
@@ -53,7 +53,7 @@
               <div class="panel-heading text-left">
                 Local Artists:
               </div>
-              <% local_artists.each do |a| %>
+              <% Echonest.local_artists.each do |a| %>
                 <%= a  %><br>
               <%  end  %>
             </div>          
